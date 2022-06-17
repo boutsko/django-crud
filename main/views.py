@@ -8,12 +8,12 @@ from django.views.generic import ListView, CreateView, DeleteView, DetailView
 # home view
 class Home(ListView):
     model = CRUD
-    template_name = 'app/base.html'
+    template_name = 'main/base.html'
  
 # create view
 class Create(CreateView):
     model = CRUD
-    template_name = 'app/create.html'
+    template_name = 'main/create.html'
     form_class = CRUDFORM
 
     # if the form, submits, to go back to the homepage automatically
@@ -23,12 +23,12 @@ class Create(CreateView):
 # detail view
 class Detail(DetailView):
     model = CRUD
-    template_name = 'app/detail.html'
+    template_name = 'main/detail.html'
 
 # update view
 class Update(UpdateView):
     model = CRUD
-    template_name = 'app/create.html'
+    template_name = 'main/create.html'
     form_class = CRUDFORM
 
     # if the form, submits, to go back to the homepage automatically
@@ -38,7 +38,7 @@ class Update(UpdateView):
 # delete view
 class Delete(DeleteView):
     model = CRUD
-    template_name = 'app/delete.html'
+    template_name = 'main/delete.html'
     # if the form, submits, to go back to the homepage automatically
     def get_success_url(self):
         return reverse('main:home')
