@@ -1,4 +1,7 @@
 # mv this file ../
+
+all:
+	../env/bin/python manage.py runserver localhost:8009
 rm:
 	rm -rf django-crud main django env && python3 -mvenv env && source env/bin/activate
 install-clean:
