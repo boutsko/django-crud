@@ -9,7 +9,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', Home.as_view(), name="home"),
     path('create/', Create.as_view(), name='create'),
-    path('<pk>/', Detail.as_view(), name='detail'),
-    path('update/<pk>/', Update.as_view(), name='update'),
-    path('delete/<pk>/', Delete.as_view(), name='delete'),   
+    path('<int:pk>/', Detail.as_view(), name='detail'),
+    path('update/<int:pk>/', Update.as_view(), name='update'),
+    path('delete/<int:pk>/', Delete.as_view(), name='delete'),
 ]
